@@ -13,7 +13,7 @@ export function setMusicParam(){
     });
     
     document.getElementsByTagName("body")[0].addEventListener("keydown",(event)=>{
-        if(event.which == 32){
+        if(event.which == 32 || event.which == 13){
             if(audio.paused == false){
                 audio.pause();
             }
@@ -30,8 +30,11 @@ export function setMusicParam(){
         if(event.key == "ArrowRight"){
             audio.currentTime += 1;
         }
-        if(event.key == "ArrowLeft"){
-            audio.currentTime -= 1;
+        if(event.key == "m"){
+            if(audio.volume == 0)
+            audio.volume = 1;
+            else
+            audio.volume = 0;
         }
         if(event.key == "m"){
             if(audio.volume == 0)
