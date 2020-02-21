@@ -21,3 +21,5 @@ document.getElementById("openDeezerCont").addEventListener("click",()=>{
     document.getElementById("openFileContainer").classList.toggle("hide");
     document.getElementById("deezerApiContainer").classList.toggle("hide");
 });
+
+

@@ -7,12 +7,39 @@ export function setMusicParam(){
      });
      
     audio.addEventListener('canplay', function(){
-        this.play();
         let context = new AudioContext();
         let input = context.createMediaElementSource(this);
         input.connect(context.destination);
     });
     
+    document.getElementsByTagName("body")[0].addEventListener("keydown",(event)=>{
+        if(event.which == 32){
+            if(audio.paused == false){
+                audio.pause();
+            }
+            else{
+                audio.play();
+            }
+        }
+        if(event.key == "ArrowUp"){
+            audio.volume += 0.1;
+        }
+        if(event.key == "ArrowDown"){
+            audio.volume -= 0.1;
+        }
+        if(event.key == "ArrowRight"){
+            audio.currentTime += 1;
+        }
+        if(event.key == "ArrowLeft"){
+            audio.currentTime -= 1;
+        }
+        if(event.key == "m"){
+            if(audio.volume == 0)
+            audio.volume = 1;
+            else
+            audio.volume = 0;
+        }
+    });
 }
  
 
