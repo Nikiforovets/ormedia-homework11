@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="deezerApiContainer" class="">
+      <div id="player"></div>
+      <div id="dz-root"></div>
+      <script src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
+
+      <label>Исполнитель  </label>
+      <input type="text" id="artistField">
+      <br>
+      <br>
+      <label>Название трека</label>
+      <input type="text" id="trackField">
+      <br>
+      <br>
+      <button id="searchBtn">Искать</button>  
+      <br>
+      <div id="track0"></div>
+      <div id="track1"></div>
+      <div id="track2"></div>
+      <div id="track3"></div>
+      <div id="track4"></div>
+      <div id="track5"></div>
+      <img id="artist" src=""></img>
+      <button id="addTrack">Добавить песню</button>
+    </div>
+    <div id="logInContainer" class="hide">
+        <label>Логин  </label>
+        <input type="text" id="loginField" value="admin">
+        <br>
+        <br>
+        <label>Пароль </label>
+        <input type="text" id="passField" value="qwerty123">
+        <br>
+        <br>
+        <button id="logInBtn">Войти</button>  
+    </div>
+    <div id="openFileContainer" class="hide">
+        <audio id="audioPlayer" controls="true"></audio>
+        <br>
+        <input type="file" id="openFiles" accept="audio/*"/>
+        <button id="openDeezerCont">На главную</button>
+    </div>
+  </body>
+</html>
